@@ -30,6 +30,9 @@ app.use(express.urlencoded({ extended: true }));
 //   .catch(err => console.log('Error connecting to MongoDB', err));
 
 app.use('/', indexRouter);
+
+// USE ROUTERS **********************
+// Routers are useful for organizing/grouping end points
 app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/tasks', tasksRouter);
@@ -38,9 +41,9 @@ app.use('/api/v1/todos', todosRouter);
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Multer upload routes
 app.use('/api/upload', uploadRouter);
+// Server static files
 app.use('/uploads', express.static('uploads'));
 
-// Server static files
 
 // catch 4040 and forward to error handler
 app.use((req, res, next) => {
