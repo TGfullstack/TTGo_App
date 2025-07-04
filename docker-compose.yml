@@ -1,0 +1,33 @@
+services:
+  backend:
+    build: ./backend
+    container_name: taylord-backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/taylord_dev
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./client
+    container_name: taylord-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
+
+  mongo:
+    image: mongo
+    container_name: ttgodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db

@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo
+    container_name: ttgodb
+    env_file: ./.env
+    environment:
+      - MONGO_INIT_DB_ROOT_USERNAME:admin
+      - MONGO_INIT_DB_ROOT_PASSWORD:secret
+    volumes:
+      - mongo_data:/data/db
+volumes:
+  mongo_data:

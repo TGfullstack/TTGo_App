@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    // Add any specific ESLint rules you want to override here
+  }
+}
