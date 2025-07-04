@@ -31,7 +31,6 @@ export default function ProjectsPage() {
       <h1 className="text-3xl font-bold mb-6">{`${projectsCount} projects`}</h1>
       <div className="flex flex-1 flex-row gap-10 mb-6">
         <Button onPress={handleCreateClick}>New Project</Button>
-        {/* <CreateProjectForm className='w-[200px] h-[350]'/> */}
       </div>
 
       <div>

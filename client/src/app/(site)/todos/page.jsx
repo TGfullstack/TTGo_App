@@ -29,7 +29,6 @@ export default function TodoPage() {
       <div>
         <div className="max-w-md  p-4 rounded">
           <Button onPress={handleCreateClick}>New Todo</Button>
-          {/* <TodoForm/> */}
         </div>
         <KanbanBoard />
         {todos.map((todo) => (
