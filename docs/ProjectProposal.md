@@ -134,7 +134,7 @@ TimeToGo api will integrate with MongoDB Atlas, a schema-less NoSQL document dat
   - [Free fake and reliable API for testing](https://jsonplaceholder.typicode.com/)
 
 - Connection string will look something like:
-  - "mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority"
+  - `mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority`
   - Add credentials
 
 - Authentication
